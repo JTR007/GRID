@@ -1,34 +1,105 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
 
 body {
-    background: rgb(230, 198, 15);
-    color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15% 10% auto 12%;
+    // color: black;
     font-family: 'Courier New', Courier, monospace;
 }
 
-header, nav, aside, section, footer {
+header, nav, aside, /*section,*/ footer {
     font-size: 30px;
     text-align: center;
     padding: 20px;
 }
 
-.contenedor {
-    width: 98%;
-    max-width: 1000px;
-    border: 10px solid white;
-    margin: auto;
-    font-size: 25px;
-    line-height: 50px;
-    text-align: center;
+header {
+    grid-column: 1 / 6;
+    background: chocolate;
+    // background-image: url(../img/estudiando.jpg);
+    // background-position-x: center;
+    // background-repeat: no-repeat;   }
+}
 
-    div {
-        display: block;
-        padding: 20px;
-        color: white;
-        background: cadetblue;
-        box-shadow: 2px 2px 10px rgba(25, 14, 15, 0.15);
+nav {
+    background: forestgreen;
+    grid-column: 1 / 6;
+}
+
+aside {
+    background: gray;
+}
+
+footer {
+    background: lightcoral;
+    grid-column: 1 / 6;
+}
+
+main {
+    background: rgb(230, 198, 15);
+    grid-column: 2 / 6;
+}
+
+section {
+    padding: 20px;
+
+    .contenedor{
+        width: 100%;
+        padding: 0px;
+        // max-width: 1000px;
+        // border: 10px solid white;
+        // font-size: 25px;
+        // line-height: 50px;
+        // text-align: center;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(6, 1fr/*minmax(150px, auto)*/);
+        grid-template-rows: repeat(3, minmax(150px, auto));
+    
+        .card {
+            // display: block;
+            // padding: 20px;
+            // color: white;
+            // background: cadetblue;
+            background-size: cover;
+            // box-shadow: 2px 2px 10px rgba(25, 14, 15, 0.15);
+
+            .content {
+                color: white;
+                text-align: center;
+
+                p {
+                    background: rgba(25, 14, 15, 0.15);
+                }
+
+                a {
+                    color: wheat;
+                    text-decoration: none;
+                    background: rgba(25, 14, 15, 0.15);
+                }
+            }
+        }
     }
 }
+
+// .contenedor {
+//     width: 98%;
+//     max-width: 1000px;
+//     border: 10px solid white;
+//     margin: auto;
+//     font-size: 25px;
+//     line-height: 50px;
+//     text-align: center;
+
+//     div {
+//         display: block;
+//         padding: 20px;
+//         color: white;
+//         background: cadetblue;
+//         box-shadow: 2px 2px 10px rgba(25, 14, 15, 0.15);
+//     }
+// }
