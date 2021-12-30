@@ -51,7 +51,11 @@ section .contenedor .card {
 }
 section .contenedor .card .content {
   color: white;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 section .contenedor .card .content p {
   background: rgba(25, 14, 15, 0.15);
