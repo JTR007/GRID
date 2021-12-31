@@ -1,5 +1,10 @@
 main {
     height: 100vh;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    
 }
 
 div {
@@ -7,4 +12,21 @@ div {
     justify-content: center;
     align-items: center;
     background-color: goldenrod;
+}
+
+@media (max-width: 600px){
+
+    div:nth-child(10) {
+        background-color: purple;
+        /* grid-column-start: 3;
+        grid-column-end: 5; */
+        grid-column: 3 / 5;
+    }
+    
+    div:nth-child(6) {
+        background-color: red;
+        grid-column: 2 / 3;
+        grid-row: 2/4;
+    }
+
 }
