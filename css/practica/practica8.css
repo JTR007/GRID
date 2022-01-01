@@ -1,0 +1,25 @@
+main {
+    height: 100vh;
+    display: grid;
+    font-family: sans-serif;
+    gap: 10px;
+    grid-template-columns: repeat(8, minmax(100px, 1fr));
+    /* 8 columnas con un minimo y un maximo (limite) */
+    /* repeat(8, minmax(10px, 1fr)); */
+    
+    /* 8 columnas con un patron dos (30px y minimo 10% y maximo flexible(fr)) */
+    /* repeat(4, 30px minmax(10%, 1fr); */
+
+    /* 8 columnas con un minimo marcado por el contenido y un maximo del 30% */
+    /* repeat(8, minmax(min-content, 30%)); */
+
+    /* 8 columnas con un maximo y minimo marcado por su contenido */
+    /* repeat(8, minmax(min-content, max-content)) */
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
