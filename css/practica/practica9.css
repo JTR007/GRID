@@ -1,0 +1,35 @@
+main {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    font-family: sans-serif;
+
+    grid-template-columns: 
+        [start]
+        repeat(4, 
+            [col-lg-start] minmax(80px, 1fr) 
+            [col-lg-end col-md-start] minmax(40px, 1fr)
+            [col-md-end col-sm-start] minmax(20px, 1fr)
+        )
+        [end]
+    ;
+}
+
+div {
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div:first-of-type{
+    background-color: purple;
+    color: white;
+    grid-column: col-lg-start / col-md-end;
+}
+
+div:nth-child(2){
+    background-color: red;
+    color: white;
+    grid-column: col-md-end / end;
+}
