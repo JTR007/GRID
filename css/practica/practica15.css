@@ -1,0 +1,42 @@
+main {
+    display: grid;
+    gap: 10px;
+    height: 100vh;
+    font-family: sans-serif;
+    grid-template-areas: 
+        "header header header"
+        "izquierda contenido derecha1"
+        "izquierda contenido derecha2"
+        "izquierda footer footer";
+}
+
+main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+}
+
+header {
+    grid-area: header;
+}
+
+article {
+    grid-area: contenido;
+}
+
+aside:first-of-type {
+    grid-area: izquierda
+}
+
+aside:nth-of-type(2) {
+    grid-area: derecha1;
+}
+
+aside:last-of-type {
+    grid-area: derecha2;
+}
+
+footer {
+    grid-area: footer;
+}
